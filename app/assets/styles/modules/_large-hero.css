@@ -1,5 +1,6 @@
 .large-hero {
   position: relative;
+
   border-bottom: 10px solid $primary-color;
 
   &__image {
@@ -8,11 +9,16 @@
 
   &__text-content {
     position: absolute;
+    padding-top: 88px;
     top: 50%;
     transform: translateY(-50%);
     left: 0%;
     width: 100%;
     text-align: center;
+
+    @mixin atMedium {
+      padding-top: 60px;
+    }
   }
   &__title {
     font-weight: 300;
