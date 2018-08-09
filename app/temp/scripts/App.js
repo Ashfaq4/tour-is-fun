@@ -9990,7 +9990,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 	return jQuery;
 });
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)(module)))
 
 /***/ }),
 /* 1 */
@@ -10003,7 +10003,7 @@ var _MobileMenu = __webpack_require__(2);
 
 var _MobileMenu2 = _interopRequireDefault(_MobileMenu);
 
-var _RevealOnScroll = __webpack_require__(4);
+var _RevealOnScroll = __webpack_require__(3);
 
 var _RevealOnScroll2 = _interopRequireDefault(_RevealOnScroll);
 
@@ -10030,35 +10030,56 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _jquery = __webpack_require__(0);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+/*
+import $ from 'jquery';
+
+class MobileMenu {
+  constructor() {
+    this.menuIcon = $('.site-header__menu-icon');
+    this.siteHeader = $('.site-header');
+    this.menuContent  = $('.site-header__menu-content');
+    this.events();
+  }
+
+  events() {
+    this.menuIcon.click(this.toggleMenu.bind(this));
+  }
+
+  toggleMenu() {
+    this.menuIcon.toggleClass('site-header__menu-icon--close-x');
+    this.siteHeader.toggleClass('site-header--is-expanded');
+    this.menuContent.toggleClass('site-header__menu-content--is-visible');
+  }
+}
+
+export default MobileMenu;
+*/
+
+//JavaScript Way
 
 var MobileMenu = function () {
   function MobileMenu() {
     _classCallCheck(this, MobileMenu);
 
-    this.menuIcon = (0, _jquery2.default)('.site-header__menu-icon');
-    this.siteHeader = (0, _jquery2.default)('.site-header');
-    this.menuContent = (0, _jquery2.default)('.site-header__menu-content');
+    this.menuIcon = document.querySelector('.site-header__menu-icon');
+    this.siteHeader = document.querySelector('.site-header');
+    this.menuContent = document.querySelector('.site-header__menu-content');
     this.events();
   }
 
   _createClass(MobileMenu, [{
     key: 'events',
     value: function events() {
-      this.menuIcon.click(this.toggleMenu.bind(this));
+      this.menuIcon.addEventListener('click', this.toggleMenu.bind(this));
     }
   }, {
     key: 'toggleMenu',
     value: function toggleMenu() {
-      this.menuIcon.toggleClass('site-header__menu-icon--close-x');
-      this.siteHeader.toggleClass('site-header--is-expanded');
-      this.menuContent.toggleClass('site-header__menu-content--is-visible');
+      this.menuIcon.classList.toggle('site-header__menu-icon--close-x');
+      this.siteHeader.classList.toggle('site-header--is-expanded');
+      this.menuContent.classList.toggle('site-header__menu-content--is-visible');
     }
   }]);
 
@@ -10069,36 +10090,6 @@ exports.default = MobileMenu;
 
 /***/ }),
 /* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-module.exports = function (module) {
-	if (!module.webpackPolyfill) {
-		module.deprecate = function () {};
-		module.paths = [];
-		// module.parent = undefined by default
-		if (!module.children) module.children = [];
-		Object.defineProperty(module, "loaded", {
-			enumerable: true,
-			get: function get() {
-				return module.l;
-			}
-		});
-		Object.defineProperty(module, "id", {
-			enumerable: true,
-			get: function get() {
-				return module.i;
-			}
-		});
-		module.webpackPolyfill = 1;
-	}
-	return module;
-};
-
-/***/ }),
-/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10158,6 +10149,36 @@ var RevealOnScroll = function () {
 }();
 
 exports.default = RevealOnScroll;
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = function (module) {
+	if (!module.webpackPolyfill) {
+		module.deprecate = function () {};
+		module.paths = [];
+		// module.parent = undefined by default
+		if (!module.children) module.children = [];
+		Object.defineProperty(module, "loaded", {
+			enumerable: true,
+			get: function get() {
+				return module.l;
+			}
+		});
+		Object.defineProperty(module, "id", {
+			enumerable: true,
+			get: function get() {
+				return module.i;
+			}
+		});
+		module.webpackPolyfill = 1;
+	}
+	return module;
+};
 
 /***/ }),
 /* 5 */
