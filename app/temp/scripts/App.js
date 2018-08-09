@@ -65,11 +65,8 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
-throw new Error("Module build failed: Error: ENOENT: no such file or directory, open 'D:\\webTech\\tour-is-fun\\package.json'\n    at Object.fs.openSync (fs.js:646:18)\n    at Object.fs.readFileSync (fs.js:551:33)\n    at ConfigChainBuilder.addConfig (D:\\webTech\\tour-is-fun\\node_modules\\babel-core\\lib\\transformation\\file\\options\\build-config-chain.js:146:32)\n    at ConfigChainBuilder.findConfigs (D:\\webTech\\tour-is-fun\\node_modules\\babel-core\\lib\\transformation\\file\\options\\build-config-chain.js:102:30)\n    at buildConfigChain (D:\\webTech\\tour-is-fun\\node_modules\\babel-core\\lib\\transformation\\file\\options\\build-config-chain.js:61:13)\n    at OptionManager.init (D:\\webTech\\tour-is-fun\\node_modules\\babel-core\\lib\\transformation\\file\\options\\option-manager.js:354:58)\n    at File.initOptions (D:\\webTech\\tour-is-fun\\node_modules\\babel-core\\lib\\transformation\\file\\index.js:212:65)\n    at new File (D:\\webTech\\tour-is-fun\\node_modules\\babel-core\\lib\\transformation\\file\\index.js:135:24)\n    at Pipeline.transform (D:\\webTech\\tour-is-fun\\node_modules\\babel-core\\lib\\transformation\\pipeline.js:46:16)\n    at transpile (D:\\webTech\\tour-is-fun\\node_modules\\babel-loader\\lib\\index.js:50:20)");
-=======
 "use strict";
 /* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 
@@ -10069,7 +10066,6 @@ var MobileMenu = function () {
 }();
 
 exports.default = MobileMenu;
->>>>>>> reveal-on-scroll
 
 /***/ }),
 /* 3 */
