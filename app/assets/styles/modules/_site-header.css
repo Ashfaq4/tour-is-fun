@@ -43,8 +43,6 @@
     right: 10px;
     z-index: 10;
 
-    
-
     &::before {
       content: "";
       position: absolute;
@@ -96,7 +94,6 @@
     &::after {
       transform: rotate(-45deg) scaleX(1.25) translateY(1px);
     }
-
   }
 
   &__menu-content {
