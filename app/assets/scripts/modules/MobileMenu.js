@@ -3,8 +3,8 @@ import $ from 'jquery';
 
 class MobileMenu {
   constructor() {
-    this.menuIcon = $('.site-header__menu-icon');
-    this.siteHeader = $('.site-header');
+    this.menuIcon     = $('.site-header__menu-icon');
+    this.siteHeader   = $('.site-header');
     this.menuContent  = $('.site-header__menu-content');
     this.events();
   }
@@ -27,9 +27,9 @@ export default MobileMenu;
 
 class MobileMenu {
   constructor() {
-    this.menuIcon = document.querySelector('.site-header__menu-icon');
-    this.siteHeader = document.querySelector('.site-header');
-    this.menuContent = document.querySelector('.site-header__menu-content');
+    this.menuIcon     = document.querySelector('.site-header__menu-icon');
+    this.siteHeader   = document.querySelector('.site-header');
+    this.menuContent  = document.querySelector('.site-header__menu-content');
     this.events();
   }
 
