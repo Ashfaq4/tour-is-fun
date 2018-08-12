@@ -9,6 +9,3 @@ new RevealOnScroll($('.feature-item'), '85%');
 new RevealOnScroll($('.testimonials'), '60%');
 var stickyHeader = new StickyHeader();
 var modal = new Modal();
-
-
-
